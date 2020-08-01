@@ -1,0 +1,60 @@
+ Working with Entity Framework .Core
+
+- dotnet new sln
+(creates new project solution)
+
+- dotnet new console -n PizzaBox.Client 
+(creates new console project in Client Dir)
+
+- dotnet new classlib-n PizzaBox.Domain
+(creates new class library in a Domain Dir)
+
+- dotnet new classlib -n PizzaBox.Storing 
+(creates new class library in a Storing Dir)
+
+- dotnet new xunit -n PizzaBox.Testing
+(creates new xUnit test project in a Testing Dir)
+
+- dotnet sln add **/*.csproj 
+(adds all .csproj files to project solution if not already added)
+
+- dotnet tool install --global dotnet-ef 
+(installs the dotnet-ef tool if not already installed)
+
+- dotnet-ef 
+(invokes dotnet-ef tool if not already invoked)
+
+- dotnet add PizzaBox.Client/PizzaBox.Client.csproj reference PizzaBox.Domain/PizzaBox.Domain.csproj
+(adds reference of p0.Domain to p0.Client if not already added)
+
+- dotnet add PizzaBox.Client/PizzaBox.Client.csproj reference PizzaBox.Storing/PizzaBox.Storing.csproj
+
+- dotnet add PizzaBox.Storing/PizzaBox.Storing.csproj reference PizzaBox.Domain/PizzaBox.Domain.csproj
+
+- dotnet add PizzaBox.Client/PizzaBox.Client.csproj package microsoft.entityframeworkcore.design
+
+- dotnet add PizzaBox.Client/PizzaBox.Client.csproj package microsoft.entityframeworkcore.sqlserver
+
+- dotnet add PizzaBox.Storing/PizzaBox.Storing.csproj package microsoft.entityframeworkcore.design
+
+- dotnet add PizzaBox.Storing/PizzaBox.Storing.csproj package microsoft.entityframeworkcore.sqlserver
+
+- create database and entities
+
+- dotnet-ef dbcontext scaffold --project PizzaBox.Storing/PizzaBox.Storing.csproj --startup-project PizzaBox.Client/PizzaBox.Client.csproj 'server=localhost;database=PizzaStoreDb;user id=sa;password=hop88SeZ' Microsoft.EntityFrameworkCore.SqlServer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

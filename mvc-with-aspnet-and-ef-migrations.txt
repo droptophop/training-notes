@@ -1,0 +1,32 @@
+MVC with ASPNET
+
+- SOLID
+ - single responsibility 
+	: structures = class
+	: function = methods	
+
+ - open-closed
+	: original behavior cannot be modified, but can be enhanced (inheritance)
+
+ - liskov's substitution
+	: as long as two (2) entities have same property, 1 <--> 1 (abstraction)
+
+ - interface segregation
+	: any object can be the product of as many parent properties as long as 
+	the parent is abstracted (the parent cannot be "real")
+
+ - dependency injection
+	: concerned with the individually defined components of an object rather than the object as a whole (minimum requirements)
+	: ex - given a screen, keyboard, and folding mechanism, implementation could
+	result in multiple products:
+		> gameboy
+		> flip phone
+		> laptop
+
+**inversion of control/dependency injection
+		
+
+- Working with EF Migrations
+ - ~/.dotnet/tools/dotnet-ef migrations add 'first migration' -s PizzaStore.Client/PizzaStore.Client.csproj -p PizzaStore.Storing/PizzaStore.Storing.csproj
+
+ - ~/.dotnet/tools/dotnet-ef database update -p PizzaStore.Storing/PizzaStore.Storing.csproj -s PizzaStore.Client/PizzaStore.Client.csproj
